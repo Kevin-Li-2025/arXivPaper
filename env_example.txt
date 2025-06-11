@@ -1,0 +1,15 @@
+# Email Configuration (required for notifications)
+# For Gmail, use: smtp.gmail.com:587 and create an App Password
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+EMAIL_FROM=liyin20200613@gmail.com
+EMAIL_PASSWORD=jxgavvyedcpoasjw
+
+# Update frequency in hours (default: 24)
+UPDATE_FREQUENCY=24
+
+# Minimum score threshold for "top" papers (default: 5)
+MIN_SCORE_THRESHOLD=5.0
+
+# Database path (optional, defaults to arxiv_notifier.db)
+# DATABASE_PATH=custom_path.db 

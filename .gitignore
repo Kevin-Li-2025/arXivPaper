@@ -1,0 +1,86 @@
+# 🔒 CONFIDENTIAL FILES - DO NOT COMMIT
+# Environment variables with API keys and passwords
+.env
+.env.local
+.env.production
+.env.staging
+
+# 📊 DATABASE FILES - Contains user data
+*.db
+*.sqlite
+*.sqlite3
+data/
+backups/
+
+# 📝 LOG FILES - May contain sensitive information
+*.log
+logs/
+arxiv_notifier.log
+
+# 🐍 PYTHON
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 🧠 ML MODELS - Large files
+models/
+*.pkl
+*.joblib
+*.h5
+*.bin
+
+# 🔧 DEVELOPMENT
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 📊 DATA FILES
+*.csv
+*.json
+*.xml
+user_data/
+papers_data/
+
+# 🔑 SECURITY
+*.pem
+*.key
+*.crt
+*.p12
+secrets/
+
+# 📱 OS SPECIFIC
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 🚀 DEPLOYMENT
+.deployment/
+docker-compose.override.yml
+
+# 📧 EMAIL TEMPLATES CACHE
+*.html.cache 
