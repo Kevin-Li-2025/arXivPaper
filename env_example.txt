@@ -2,8 +2,8 @@
 # For Gmail, use: smtp.gmail.com:587 and create an App Password
 SMTP_SERVER=smtp.gmail.com
 SMTP_PORT=587
-EMAIL_FROM=liyin20200613@gmail.com
-EMAIL_PASSWORD=jxgavvyedcpoasjw
+EMAIL_FROM=user@gmail.com
+EMAIL_PASSWORD=16 digits password
 
 # Update frequency in hours (default: 24)
 UPDATE_FREQUENCY=24
