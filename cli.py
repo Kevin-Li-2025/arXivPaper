@@ -366,7 +366,7 @@ def test_scoring(method, count):
         # Validate method first
         validation = PaperScorer.validate_method(method)
         if not validation['valid']:
-            click.echo(f"❌ Cannot test {method} method:")
+            click.echo(f"Cannot test {method} method:")
             for error in validation['errors']:
                 click.echo(f"   • {error}")
             return
@@ -376,11 +376,11 @@ def test_scoring(method, count):
         papers = db.get_top_papers(count)
         
         if not papers:
-            click.echo("📄 No papers in database, fetching from arXiv...")
+            click.echo("No papers in database, fetching from arXiv...")
             client = ArxivClient()
             paper_dicts = client.fetch_recent_papers()
             if not paper_dicts:
-                click.echo("❌ Could not fetch papers for testing")
+                click.echo("Error: Could not fetch papers for testing")
                 return
             # Limit to requested count
             paper_dicts = paper_dicts[:count]
@@ -401,16 +401,16 @@ def test_scoring(method, count):
             paper_dicts = paper_dicts[:count]
         
         # Test the scoring method
-        click.echo(f"🧪 Testing {method} scoring method with {len(paper_dicts)} papers...")
+        click.echo(f"Testing {method} scoring method with {len(paper_dicts)} papers...")
         
         scorer = PaperScorer(method)
         method_info = scorer.get_method_info()
-        click.echo(f"📊 Using: {method_info['name']}")
+        click.echo(f"Using: {method_info['name']}")
         
         scored_papers = scorer.score_papers(paper_dicts)
         
         # Show results
-        click.echo(f"\n🏆 Scoring Results:")
+        click.echo(f"\nScoring Results:")
         click.echo("=" * 60)
         
         for i, paper in enumerate(scored_papers, 1):
@@ -430,10 +430,10 @@ def test_scoring(method, count):
             click.echo(f"   Published: {published_str}")
         
         avg_score = sum(p['score'] for p in scored_papers) / len(scored_papers)
-        click.echo(f"\n📈 Average Score: {avg_score:.1f}/20")
+        click.echo(f"\nAverage Score: {avg_score:.1f}/20")
         
     except Exception as e:
-        click.echo(f"❌ Error: {e}")
+        click.echo(f"Error: {e}")
 
 @cli.command()
 def run():

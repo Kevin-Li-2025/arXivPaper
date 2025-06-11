@@ -1,15 +1,15 @@
-# 🤖 TopPapersAI
+# TopPapersAI
 
-Automatically get the best CS.AI papers from arXiv delivered to your email. Stay updated with top research without the noise.
+Automatically get the best Computer Science papers from arXiv delivered to your email. Stay updated with top research without the noise.
 
-## ✨ Features
+## Features
 
-- 📧 **Email notifications** with top-rated papers
-- 🤖 **3 scoring methods**: Rule-based, Transformer, or API (ChatGPT/Claude/Gemini)
-- ⚡ **Easy setup** - works in 5 minutes
-- 🔒 **Privacy-focused** - your data stays local
+- **Email notifications** with top-rated papers
+- **3 scoring methods**: Rule-based, Transformer, or API (ChatGPT/Claude/Gemini)
+- **Easy setup** - works in 5 minutes
+- **Privacy-focused** - your data stays local
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Install
@@ -24,11 +24,11 @@ cp env_example.txt .env
 # Register yourself
 python3 cli.py register --email your@email.com --name "Your Name"
 
-# Get papers!
+# Get papers
 python3 cli.py notify
 ```
 
-## ⚙️ Main Commands
+## Main Commands
 
 ```bash
 python3 cli.py register --email user@example.com    # Add new user
@@ -38,7 +38,7 @@ python3 cli.py users                                # List users
 python3 cli.py scoring-methods                      # Compare scoring options
 ```
 
-## 📧 Email Setup (Gmail)
+## Email Setup (Gmail)
 
 1. Enable 2-Factor Authentication
 2. Generate App Password: [Google Account Settings](https://myaccount.google.com) → Security → App Passwords
@@ -48,17 +48,17 @@ python3 cli.py scoring-methods                      # Compare scoring options
    EMAIL_PASSWORD=your_16_char_app_password
    ```
 
-## 🎯 Scoring Methods
+## Scoring Methods
 
 | Method | Speed | Cost | Accuracy |
 |--------|-------|------|----------|
-| **Rule-based** | ⚡ Fast | 🆓 Free | ✅ Good |
-| **Transformer** | 🐌 Medium | 🆓 Free | ✅✅ Better |
-| **API** | 🐌 Slow | 💰 Paid | ✅✅✅ Best |
+| **Rule-based** | Fast | Free | Good |
+| **Transformer** | Medium | Free | Better |
+| **API** | Slow | Paid | Best |
 
 Switch anytime: `python3 cli.py notify --method transformer`
 
-## 🔧 Configuration
+## Configuration
 
 Edit `.env` for your settings:
 ```env
@@ -72,20 +72,20 @@ MIN_SCORE_THRESHOLD=6.0      # Minimum score for "top" papers
 UPDATE_FREQUENCY=24          # Hours between updates
 ```
 
-## 🤝 arXiv Compliance
+## arXiv Compliance
 
-✅ Non-commercial use  
-✅ Proper attribution  
-✅ Respectful API usage  
+- Non-commercial use  
+- Proper attribution  
+- Respectful API usage  
 
 *"Thank you to arXiv for use of its open access interoperability."*
 
-## 🆘 Need Help?
+## Troubleshooting
 
-- 📧 **Email not working?** Check if you're using App Password (not regular password)
-- 🔍 **No papers found?** Try: `python3 cli.py papers` to see what's available
-- ⚡ **Want better scores?** Try: `python3 cli.py notify --method transformer`
+- **Email not working?** Check if you're using App Password (not regular password)
+- **No papers found?** Try: `python3 cli.py papers` to see what's available
+- **Want better scores?** Try: `python3 cli.py notify --method transformer`
 
 ---
 
-**Made with ❤️ for researchers. Star ⭐ if this helps you stay updated with AI research!** 
+**Made for researchers. Star if this helps you stay updated with research.** 

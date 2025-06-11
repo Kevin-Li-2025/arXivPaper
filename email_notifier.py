@@ -113,8 +113,8 @@ class EmailNotifier:
 </head>
 <body>
     <div class="header">
-        <h1>🤖 Top CS.AI Papers Update</h1>
-        <p>Your curated selection of high-impact artificial intelligence research</p>
+        <h1>Top Computer Science Papers Update</h1>
+        <p>Your curated selection of high-impact research papers</p>
     </div>
     
     {% if papers %}
@@ -158,7 +158,7 @@ class EmailNotifier:
             
             # Create message
             msg = MIMEMultipart('alternative')
-            msg['Subject'] = f"🤖 Top CS.AI Papers Update - {len(papers)} New Papers"
+            msg['Subject'] = f"Top Computer Science Papers Update - {len(papers)} New Papers"
             msg['From'] = self.email_from
             msg['To'] = user_email
             
@@ -192,11 +192,11 @@ class EmailNotifier:
     def _create_text_version(self, papers: List[Dict], user_name: str) -> str:
         """Create a plain text version of the email."""
         text_lines = [
-            f"Top CS.AI Papers Update",
+            f"Top Computer Science Papers Update",
             "=" * 50,
             f"Hello {user_name},",
             "",
-            f"Here are {len(papers)} new high-impact papers in artificial intelligence:",
+            f"Here are {len(papers)} new high-impact research papers:",
             ""
         ]
         
