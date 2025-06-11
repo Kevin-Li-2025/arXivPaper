@@ -17,6 +17,13 @@ backups/
 logs/
 arxiv_notifier.log
 
+# 🚨 SENSITIVE DATA - Personal emails, user data
+*personal*
+*private*
+user_emails.txt
+test_emails.txt
+real_emails.txt
+
 # 🐍 PYTHON
 __pycache__/
 *.py[cod]
