@@ -2,6 +2,10 @@
 
 Automatically get the best Computer Science papers from arXiv delivered to your email. Stay updated with top research without the noise.
 
+## Project Scope
+
+TopPapersAI is a local-first research monitoring tool. It fetches recent arXiv papers, scores them with a configurable ranking strategy, stores subscribers locally, and sends digest emails. The project is intended as a practical automation tool rather than a hosted newsletter service.
+
 ## Features
 
 - **Email notifications** with top-rated papers
@@ -37,6 +41,24 @@ python3 cli.py papers                               # View available papers
 python3 cli.py users                                # List users
 python3 cli.py scoring-methods                      # Compare scoring options
 ```
+
+## Architecture
+
+```text
+cli.py              Command-line entry point
+config.py           Runtime configuration and environment loading
+paper_fetcher.py    arXiv query and paper normalization
+scorer.py           Rule/API/model scoring strategies
+email_sender.py     Digest rendering and SMTP delivery
+templates/          Email templates
+static/             Optional local web assets
+```
+
+## Data and Privacy
+
+- Subscriber data stays in the local project environment.
+- Email credentials should be stored in `.env`, not committed.
+- API-based scoring is optional; rule-based scoring can run without external model providers.
 
 ## Email Setup (Gmail)
 
